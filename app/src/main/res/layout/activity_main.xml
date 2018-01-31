@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cdsm.tp001.MainActivity">
+
+    <TextView
+        android:id="@+id/ZoneCDSM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="CDSM"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/Zone2017"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="2017"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ZoneCDSM"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/ZoneFDME"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="FDME"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ZoneCDSM"
+        app:layout_constraintEnd_toEndOf="@+id/Zone2017"
+        app:layout_constraintStart_toStartOf="@+id/ZoneCDSM"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ZoneNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toTopOf="@id/EditNom"
+        app:layout_constraintStart_toStartOf="@id/EditNom"/>
+
+    <EditText
+        android:id="@+id/EditNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@id/ZoneCDSM"
+        app:layout_constraintTop_toBottomOf="@id/ZoneCDSM"
+        app:layout_constraintVertical_bias="0.20" />
+
+    <TextView
+        android:id="@+id/ZonePrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prenom"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toBottomOf="@id/EditNom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/EditNom"
+        app:layout_constraintVertical_bias="0.20" />
+
+    <EditText
+        android:id="@+id/EditPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@id/ZonePrenom"
+        app:layout_constraintTop_toBottomOf="@id/ZonePrenom" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Switch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EditPrenom">
+
+        <RadioButton
+            android:id="@+id/radioHomme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Homme"
+             />
+
+        <RadioButton
+            android:id="@+id/radioFemme"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femme"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/afficherBtn"
+        android:text="AFFICHER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/Sexe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light"
+        android:layout_marginLeft="20dp"
+        android:padding="5sp"
+        android:text="Sexe"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/getSexe"
+        app:layout_constraintLeft_toRightOf="@id/switch1" />
+
+    <TextView
+        android:id="@+id/getSexe"
+        android:layout_width="0dp"
+        android:background="@android:color/holo_orange_light"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:padding="5sp"
+        android:text=""
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/Sexe"
+        app:layout_constraintRight_toLeftOf="@id/afficherBtn" />
+
+
+    <TextView
+        android:id="@+id/Prenom"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/holo_orange_light"
+        android:padding="5sp"
+        android:text="Prenom"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/Sexe"
+        app:layout_constraintLeft_toRightOf="@id/switch1"
+        app:layout_constraintRight_toLeftOf="@id/getPrenom" />
+
+    <TextView
+        android:id="@+id/getPrenom"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/holo_orange_light"
+        android:padding="5sp"
+        android:text=""
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/getSexe"
+        app:layout_constraintLeft_toRightOf="@id/Prenom"
+        app:layout_constraintRight_toLeftOf="@id/afficherBtn" />
+
+    <TextView
+        android:id="@+id/Nom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/holo_orange_light"
+        android:padding="5sp"
+        android:text="Nom"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/switch1"
+        app:layout_constraintRight_toLeftOf="@id/getNom"
+        app:layout_constraintBottom_toTopOf="@id/Prenom" />
+
+    <TextView
+        android:id="@+id/getNom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/holo_orange_light"
+        android:padding="5sp"
+        android:text=""
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/Nom"
+        app:layout_constraintBottom_toTopOf="@id/getPrenom"
+        app:layout_constraintRight_toLeftOf="@id/afficherBtn" />
+
+
+    <Button
+        android:id="@+id/razBtn"
+        android:text="RAZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/afficherBtn"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
